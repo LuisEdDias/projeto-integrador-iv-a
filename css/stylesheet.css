@@ -140,11 +140,31 @@ header {
     width: 100%;
 }
 
+#projects h3 {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(229, 112, 34, 1) 30%, rgba(229, 112, 34, 1) 70%, rgba(255, 255, 255, 1) 100%);
+}
+
+#help {
+    font-family: "DM Sans", sans-serif;
+    text-align: justify;
+    background: rgba(229, 112, 34, 1);
+}
+#comments {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(229, 112, 34, 1) 100%);
+}
+
 footer {
     justify-content: center;
     align-items: center;
     width: 100%;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(229, 112, 34, 1) 100%);
+    background: rgba(229, 112, 34, 1);
+}
+
+.footer-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .copyright {
