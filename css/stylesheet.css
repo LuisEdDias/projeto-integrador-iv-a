@@ -12,6 +12,10 @@ header {
     justify-content: center;
 }
 
+.logo-header img {
+    object-fit: scale-down;
+}
+
 .title h1 {
     font-family: "JetBrains Mono", monospace;
     text-align: center;
