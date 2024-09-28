@@ -12,10 +12,6 @@ header {
     justify-content: center;
 }
 
-.logo-header img {
-    object-fit: scale-down;
-}
-
 .title h1 {
     font-family: "JetBrains Mono", monospace;
     text-align: center;
@@ -105,9 +101,8 @@ header {
     font-size: 1em;
 }
 
-.carousel {
+#main-carousel {
     height: 85vh;
-    box-sizing: border-box;
 }
 
 .carousel-caption {
@@ -154,17 +149,7 @@ header {
 }
 
 footer {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
     background: rgba(229, 112, 34, 1);
-}
-
-.footer-section {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .copyright {
@@ -189,7 +174,13 @@ footer {
 }
 
 @media (max-device-width: 992px) {
-    .carousel {
+    #main-carousel {
+        height: auto;
+    }
+}
+
+@media (min-device-height: 992px) {
+    #main-carousel {
         height: auto;
     }
 }

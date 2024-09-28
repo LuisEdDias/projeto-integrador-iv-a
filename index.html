@@ -2,15 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--  Bootstrap import  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css" rel="stylesheet"/>
     <!--  Stylesheet import  -->
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
     <title>Instituto de Menores</title>
 </head>
-<body class="d-flex flex-column">
+<body class="d-flex flex-column text-black">
 <header class="row p-0 m-0">
     <section class="d-flex align-content-center justify-content-around" id="title">
         <div class="logo-header col-2">
@@ -25,108 +29,118 @@
     </section>
 </header>
 <main class="row p-0 m-0">
-    <section class="nav-menu sticky-top p-2 border-bottom border-black border-top">
-        <nav class="navbar navbar-expand-lg p-0">
-            <div class="container-fluid p-0 mx-lg-5 mx-1">
-                <a class="nav-button" href="#title">
-                    <span class="top-key"></span>
-                    <span class="text">INÍCIO</span>
-                    <span class="bottom-key"></span>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-lg-between" id="navbarSupportedContent">
-                    <ul class="navbar-nav mb-lg-0">
-                        <li class="nav-item my-2 my-lg-0">
-                            <a class="nav-button" href="#about-us">
-                                <span class="top-key"></span>
-                                <span class="text">SOBRE</span>
-                                <span class="bottom-key"></span>
-                            </a>
-                        </li>
-                        <li class="nav-item mb-2 mb-lg-0">
-                            <a class="nav-button" href="#projects">
-                                <span class="top-key"></span>
-                                <span class="text">SERVIÇOS OFERECIDOS</span>
-                                <span class="bottom-key"></span>
-                            </a>
-                        </li>
-                        <li class="nav-item mb-2 mb-lg-0">
-                            <a class="nav-button" href="#">
-                                <span class="top-key"></span>
-                                <span class="text">PÁGINAS RELACIONADAS</span>
-                                <span class="bottom-key"></span>
-                            </a>
-                        </li>
-                        <li class="nav-item mb-2 mb-lg-0">
-                            <a class="nav-button" href="#">
-                                <span class="top-key"></span>
-                                <span class="text">CONTATO</span>
-                                <span class="bottom-key"></span>
-                            </a>
-                        </li>
-                    </ul>
-                    <form class="d-flex mb-2 mb-lg-0" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <a class="nav-button" href="#">
+    <nav class="navbar navbar-expand-lg nav-menu sticky-top p-2 border-bottom border-black border-top">
+        <div class="container-fluid p-0 mx-lg-5 m-2 my-lg-auto">
+            <a class="navbar-brand nav-button m-0 mb-lg-0" href="#title">
+                <span class="top-key"></span>
+                <span class="text">INÍCIO</span>
+                <span class="bottom-key"></span>
+            </a>
+            <button
+                    data-mdb-collapse-init
+                    class="navbar-toggler border border-black p-3"
+                    type="button"
+                    data-mdb-target="#navbarToggler"
+                    aria-controls="navbarToggler"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+            >
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-lg-between mt-2 mt-lg-0" id="navbarToggler">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item mb-2 mb-lg-0">
+                        <a class="nav-button" href="#about-us">
                             <span class="top-key"></span>
-                            <span class="text">BUSCAR</span>
+                            <span class="text">SOBRE</span>
                             <span class="bottom-key"></span>
                         </a>
-                    </form>
-                </div>
+                    </li>
+                    <li class="nav-item mb-2 mb-lg-0">
+                        <a class="nav-button" href="#projects">
+                            <span class="top-key"></span>
+                            <span class="text">SERVIÇOS OFERECIDOS</span>
+                            <span class="bottom-key"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2 mb-lg-0">
+                        <a class="nav-button" href="#">
+                            <span class="top-key"></span>
+                            <span class="text">PÁGINAS RELACIONADAS</span>
+                            <span class="bottom-key"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2 mb-lg-0">
+                        <a class="nav-button" href="#">
+                            <span class="top-key"></span>
+                            <span class="text">CONTATO</span>
+                            <span class="bottom-key"></span>
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex mb-2 mb-lg-0" role="search">
+                    <input class="form-control me-1 border border-black" type="search" placeholder="Buscar"
+                           aria-label="Search">
+                    <a class="nav-button" href="#">
+                        <span class="top-key"></span>
+                        <span class="text">BUSCAR</span>
+                        <span class="bottom-key"></span>
+                    </a>
+                </form>
             </div>
-        </nav>
-    </section>
-    <section id="main-carousel" class="carousel bg-black px-0 py-4">
-        <div class="carousel slide h-100" data-mdb-ride="carousel" data-mdb-carousel-init>
-            <div class="carousel-inner h-100">
-                <div class="carousel-item h-100" data-mdb-interval="10000">
-                    <img src="img/dia-da-criança.png" class="d-flex img-fluid h-100 mx-auto"
-                         alt="Banner - Incentivo a doação para comememorações do Dia da Criança"/>
-                </div>
-                <div class="carousel-item h-100 active" data-mdb-interval="10000">
-                    <img src="img/imdaz-100-anos.jpeg" class="d-flex img-fluid h-100 mx-auto"
-                         alt="Foto - Comemoração dos 100 anos do instituto"/>
-                    <div class="carousel-caption">
-                        <h4>100 Anos de História!</h4>
-                        <p>Instituto de Menores Dom Antônio Zattera comemora seu aniversário</p>
-                    </div>
-                </div>
-                <div class="carousel-item h-100" data-mdb-interval="10000">
-                    <img src="img/visita-shopping-pelotas.jpg" class="d-flex img-fluid h-100 mx-auto"
-                         alt="Foto - Alunos em frente ao Shopping Pelotas"/>
-                    <div class="carousel-caption">
-                        <h4>Dia de Passeio</h4>
-                        <p>Alunos do instituto visitam Shopping Pelotas e assistem à filme no cinema</p>
-                    </div>
-                </div>
-                <div class="carousel-item h-100" data-mdb-interval="10000">
-                    <img src="img/doacao-banco-alimentos.jpg" class="d-flex img-fluid h-100 mx-auto"
-                         alt="Foto - Entrega de alimentos para famílias atendidas pelo instituto"/>
-                    <div class="carousel-caption">
-                        <h4>Solidariedade Combatendo a Insegurança Alimentar</h4>
-                        <p>Famílias atendidas pelo IMDAZ recebem cestas básicas do Banco de Alimentos de Pelotas</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-mdb-target="#main-carousel"
-                    data-mdb-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-mdb-target="#main-carousel"
-                    data-mdb-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-    </section>
+    </nav>
+    <div id="main-carousel" class="carousel slide p-0" data-mdb-ride="carousel" data-mdb-carousel-init>
+        <div class="carousel-indicators">
+            <button type="button" data-mdb-target="#main-carousel" data-mdb-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-mdb-target="#main-carousel" data-mdb-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-mdb-target="#main-carousel" data-mdb-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-mdb-target="#main-carousel" data-mdb-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner bg-black h-100 py-lg-3">
+            <div class="carousel-item h-100 active">
+                <img src="img/dia-da-criança.png" class="d-block d-lg-flex mx-auto h-100 img-fluid"
+                     alt="Banner - Incentivo a doação para comememorações do Dia da Criança"/>
+            </div>
+            <div class="carousel-item h-100">
+                <img src="img/imdaz-100-anos.jpeg" class="d-block d-lg-flex mx-auto h-100 img-fluid"
+                     alt="Foto - Comemoração dos 100 anos do instituto"/>
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>100 Anos de História!</h4>
+                    <p>Instituto de Menores Dom Antônio Zattera comemora seu aniversário</p>
+                </div>
+            </div>
+            <div class="carousel-item h-100">
+                <img src="img/visita-shopping-pelotas.jpg" class="d-block d-lg-flex mx-auto h-100 img-fluid"
+                     alt="Foto - Alunos em frente ao Shopping Pelotas"/>
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>Dia de Passeio</h4>
+                    <p>Alunos do instituto visitam Shopping Pelotas e assistem à filme no cinema</p>
+                </div>
+            </div>
+            <div class="carousel-item h-100">
+                <img src="img/doacao-banco-alimentos.jpg" class="d-block d-lg-flex mx-auto h-100 img-fluid"
+                     alt="Foto - Entrega de alimentos para famílias atendidas pelo instituto"/>
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>Solidariedade Combatendo a Insegurança Alimentar</h4>
+                    <p>Famílias atendidas pelo IMDAZ recebem cestas básicas do Banco de Alimentos de Pelotas</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-mdb-target="#main-carousel" data-mdb-slide="prev">
+            <span class="fas fa-4x fa-circle-chevron-left border border-black rounded-circle bg-black d-none d-md-block"
+                  aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-mdb-target="#main-carousel" data-mdb-slide="next">
+            <span class="fas fa-4x fa-circle-chevron-right border border-black rounded-circle bg-black d-none d-md-block"
+                  aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
     <!--Section: About Us-->
-    <section id="about-us" class="ps-5 pt-5 pe-5 pb-0 mx-0">
+    <section id="about-us" class="px-lg-5 px-0 pt-5 pb-0 mx-0">
         <div class="row bg-white m-0">
             <div class="col-md-6 p-0">
                 <div class="bg-image hover-overlay shadow-2-strong" data-mdb-ripple-init
@@ -274,12 +288,12 @@
             <form class="w-75 card border border-black p-2">
                 <h2>Contato</h2>
                 <div data-mdb-input-init class="form-outline mb-2">
-                    <input type="text" id="name" class="form-control" />
+                    <input type="text" id="name" class="form-control"/>
                     <label class="form-label" for="name">Nome</label>
                 </div>
 
                 <div data-mdb-input-init class="form-outline mb-2">
-                    <input type="email" id="email" class="form-control" />
+                    <input type="email" id="email" class="form-control"/>
                     <label class="form-label" for="email">Email</label>
                 </div>
 
@@ -294,118 +308,104 @@
     </section>
     <!--Section: Comments-->
     <section id="comments" class="px-5 m-0">
-        <article class="row bg-white m-0">
-            <div class="col-md-6 p-0">
-                <div class="bg-image hover-overlay shadow-2-strong" data-mdb-ripple-init
-                     data-mdb-ripple-color="light">
-                    <figure class="figure">
-                        <img src="img/primeiro-predio-instituto-de-menores.jpg" class="img-fluid"
-                             alt="Foto - Primeiro prédio do institut de menores"/>
-                        <figcaption class="">Construção do primeiro prédio do instituto</figcaption>
-                    </figure>
-                </div>
-            </div>
 
-            <div class="col-md-6 p-4">
-                <h2><strong>Um pouco sobre nós . . .</strong></h2>
-                <p class="text-muted">
-                    &emsp;&emsp;Fundada em 1924 por Dom Joaquim Ferreira de Mello, a nossa instituição começou como
-                    a Associação
-                    Protetora de Meninos Desvalidos em Pelotas, oferecendo educação e assistência a meninos
-                    carentes. Em
-                    1925, o nome mudou para Asilo de Meninos Desvalidos de Pelotas, e em 1926, com o apoio dos
-                    Irmãos
-                    Lassalistas, a qualidade educacional foi elevada. O "Colégio da Igrejinha" prosperou,
-                    tornando-se
-                    uma referência na comunidade, com o número de alunos crescendo significativamente.
-                </p>
-                <p class="text-muted m-0">
-                    &emsp;&emsp;Em 1944, sob a liderança de Dom Antônio Zattera, a instituição ampliou seu alcance e
-                    inaugurou o
-                    Instituto de Menores de Pelotas, no local onde antes funcionava o Asilo, continuando seu legado
-                    de
-                    apoio à infância abandonada e desprotegida. Hoje, seguimos com a mesma missão de promover a
-                    educação
-                    e o cuidado, ajudando a transformar vidas e contribuir para uma sociedade mais justa e
-                    solidária.
-                </p>
-            </div>
-        </article>
     </section>
 </main>
-<footer>
-    <section class="footer-section px-5">
-        <article class="col-md-2 col-lg-4 col-xl-3 mx-auto mb-4 p-2 align-self-start">
-            <h6 class="text-uppercase fw-bold mb-4">
-                <i class="fas fa-gem me-3"></i>Company name
-            </h6>
-            <p>
-                Here you can use rows and columns to organize your footer content. Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit.
-            </p>
-        </article>
-        <article class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 p-2 align-self-start">
-            <h6 class="text-uppercase fw-bold mb-4">
-                Products
-            </h6>
-            <p>
-                <a href="#!" class="text-reset">Angular</a>
-            </p>
-            <p>
-                <a href="#!" class="text-reset">React</a>
-            </p>
-            <p>
-                <a href="#!" class="text-reset">Vue</a>
-            </p>
-            <p>
-                <a href="#!" class="text-reset">Laravel</a>
-            </p>
-        </article>
-        <article class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 p-2 align-self-start">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-                Useful links
-            </h6>
-            <p>
-                <a href="#!" class="text-reset">Pricing</a>
-            </p>
-            <p>
-                <a href="#!" class="text-reset">Settings</a>
-            </p>
-            <p>
-                <a href="#!" class="text-reset">Orders</a>
-            </p>
-            <p>
-                <a href="#!" class="text-reset">Help</a>
-            </p>
-        </article>
-        <article class="col-5 d-flex mb-md-0 mb-4">
-            <div class="col-6 py-2 d-block">
-                <h6 class="text-uppercase fw-bold mb-2">Contato</h6>
-                <p class="fw-bold mb-1">Telefone</p>
-                <p class="mb-2">(53) 3228.5505</p>
-                <p class="fw-bold mb-1">Email</p>
-                <p class="mb-2">institutodemenores@gmail.com</p>
-                <p class="fw-bold mb-1">Endereço</p>
-                <p class="mb-2">Av. Domingos de Almeida, 3150.<br>Pelotas - RS CEP 96085-470</p>
-            </div>
-            <div class="col-6 py-2 ps-2 m-0">
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+    <!-- Section: Links  -->
+    <section class="menuFooter">
+            <!-- Grid row -->
+            <div class="row d-flex text-center text-md-start mt-5 mx-0 mx-md-3 justify-content-between">
+                <!-- Grid column -->
+                <div class="d-flex col-12 col-md-6 col-lg-4 mb-md-0 mb-4 justify-content-center">
+                    <!-- Content -->
+                    <div class="col-4 p-1 align-items-center">
+                        <img src="img/imdaz-icon.webp" class="img-fluid" alt="Logo IMDAZ">
+                    </div>
+                    <div class="col-auto flex-column p-1 text-center align-items-center">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Instituto de Menores<br>Dom Antônio Zattera
+                        </h6>
+                        <a href="" class="text-reset d-block mb-2">
+                            <i class="fab fa-facebook-f me-2"></i>/institutodemenoresdaz
+                        </a>
+                        <a href="" class="text-reset d-block mb-2">
+                            <i class="fab fa-instagram me-2"></i>@imdaz.1924
+                        </a>
+                        <p>CNPJ 92.238.138.0022-76</p>
+                    </div>
+                </div>
+                <!-- Grid column -->
 
+                <!-- Grid column -->
+                <div class="col-lg-2 mb-4 d-none d-lg-block">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Products
+                    </h6>
+                    <p>
+                        <a href="#!" class="text-reset">Angular</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">React</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Vue</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Laravel</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-lg-2 mb-4 d-none d-lg-block">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Publicações mais Populares
+                    </h6>
+                    <p>
+                        <a href="#!" class="text-reset">Pricing</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Settings</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Orders</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Help</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-12 col-md-auto col-lg-3 mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">Contato</h6>
+                    <p><i class="fas fa-home me-3"></i>Av. Domingos de Almeida, 3150.<br>Pelotas - RS CEP 96085-470</p>
+                    <p>
+                        <i class="fas fa-envelope me-3"></i>institutodemenores@gmail.com
+                    </p>
+                    <p><i class="fas fa-phone me-3"></i>(53) 3228.5505</p>
+                    <p><i class="fab fa-whatsapp me-3"></i>+5553999030409</p>
+                </div>
+                <!-- Grid column -->
             </div>
-        </article>
+            <!-- Grid row -->
     </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
     <section class="copyright p-2">
         <p class="m-0">&copy; 2024 Copyright: <a class="text-white" href="https://www.linkedin.com/in/luisvdias94/">Luís
             Eduardo Dias</a>,
             UCPel - Análise e Desenvolvimento de Sistemas</p>
     </section>
+    <!-- Copyright -->
 </footer>
-
-<!--  Bootstrap script import  -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous">
-</script>
+<!-- Footer -->
 
 <!-- MDB -->
 <script
