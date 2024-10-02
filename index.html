@@ -59,15 +59,9 @@
                 <span class="text">INÍCIO</span>
                 <span class="bottom-key"></span>
             </a>
-            <button
-                    data-mdb-collapse-init
-                    class="navbar-toggler border border-black p-3"
-                    type="button"
-                    data-mdb-target="#navbarToggler"
-                    aria-controls="navbarToggler"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-            >
+            <button data-mdb-collapse-init class="navbar-toggler border border-black p-3" type="button"
+                    data-mdb-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
+                    aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse justify-content-lg-between mt-2 mt-lg-0" id="navbarToggler">
@@ -86,15 +80,38 @@
                             <span class="bottom-key"></span>
                         </a>
                     </li>
-                    <li class="nav-item mb-2 mb-lg-0">
-                        <a class="nav-button" href="#">
+                    <li class="nav-item dropdown mb-2 mb-lg-0">
+                        <a data-mdb-dropdown-init class="nav-button" href="#" id="relatedLinks"
+                           role="button" aria-expanded="false" aria-haspopup="true">
                             <span class="top-key"></span>
                             <span class="text">PÁGINAS RELACIONADAS</span>
                             <span class="bottom-key"></span>
                         </a>
+                        <ul class="dropdown-menu" aria-labelledby="relatedLinks">
+                            <li>
+                                <a class="dropdown-item" href="https://institutodemenores.wixsite.com/meusite">
+                                    Site Oficial IMDAZ
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="https://www.doeparaoimdaz.com/">Doar</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="https://domantoniozattera.ucpel.edu.br/">
+                                    Memorial Dom Antônio Zattera
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item mb-2 mb-lg-0">
-                        <a class="nav-button" href="#">
+                        <a class="nav-button" href="#help">
+                            <span class="top-key"></span>
+                            <span class="text">COMO AJUDAR</span>
+                            <span class="bottom-key"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2 mb-lg-0">
+                        <a class="nav-button" href="#help">
                             <span class="top-key"></span>
                             <span class="text">CONTATO</span>
                             <span class="bottom-key"></span>
@@ -127,11 +144,11 @@
         <div class="carousel-inner bg-black h-100 py-3">
             <div class="carousel-item h-100 active" data-mdb-interval="7000">
                 <img src="img/dia-da-criança.png" class="d-block d-lg-flex mx-auto h-100 img-fluid"
-                     alt="Banner - Incentivo a doação para comememorações do Dia da Criança"/>
+                     alt="Banner - Incentivo a doação para comememorações do Dia da Criança" loading="lazy"/>
             </div>
             <div class="carousel-item h-100" data-mdb-interval="7000">
                 <img src="img/imdaz-100-anos.jpeg" class="d-block d-lg-flex mx-auto h-100 img-fluid"
-                     alt="Foto - Comemoração dos 100 anos do instituto"/>
+                     alt="Foto - Comemoração dos 100 anos do instituto" loading="lazy"/>
                 <div class="carousel-caption d-none d-md-block">
                     <h4>100 Anos de História!</h4>
                     <p>Instituto de Menores Dom Antônio Zattera comemora seu aniversário</p>
@@ -139,7 +156,7 @@
             </div>
             <div class="carousel-item h-100" data-mdb-interval="7000">
                 <img src="img/visita-shopping-pelotas.jpg" class="d-block d-lg-flex mx-auto h-100 img-fluid"
-                     alt="Foto - Alunos em frente ao Shopping Pelotas"/>
+                     alt="Foto - Alunos em frente ao Shopping Pelotas" loading="lazy"/>
                 <div class="carousel-caption d-none d-md-block">
                     <h4>Dia de Passeio</h4>
                     <p>Alunos do instituto visitam Shopping Pelotas e assistem à filme no cinema</p>
@@ -147,7 +164,7 @@
             </div>
             <div class="carousel-item h-100" data-mdb-interval="7000">
                 <img src="img/doacao-banco-alimentos.jpg" class="d-block d-lg-flex mx-auto h-100 img-fluid"
-                     alt="Foto - Entrega de alimentos para famílias atendidas pelo instituto"/>
+                     alt="Foto - Entrega de alimentos para famílias atendidas pelo instituto" loading="lazy"/>
                 <div class="carousel-caption d-none d-md-block">
                     <h4>Solidariedade Combatendo a Insegurança Alimentar</h4>
                     <p>Famílias atendidas pelo IMDAZ recebem cestas básicas do Banco de Alimentos de Pelotas</p>
@@ -169,42 +186,39 @@
 
     <!--  Section: About Us  -->
     <section id="about-us" class="px-lg-5 px-0 p-0 pt-lg-5 mx-0">
+        <h2 class="text-center fw-bold my-2 p-2">Um Pouco Sobre Nós</h2>
         <div class="row bg-white m-0">
-            <h2 class="text-center fw-bold my-2">Um Pouco Sobre Nós ...</h2>
-            <div class="col-md-6 p-0">
+            <div class="col-md-6 p-0 float-start">
                 <div class="bg-image hover-overlay" data-mdb-ripple-init
                      data-mdb-ripple-color="light">
                     <figure class="figure">
                         <img src="img/primeiro-predio-instituto-de-menores.jpg" class="img-fluid"
-                             alt="Foto - Primeiro prédio do institut de menores"/>
+                             alt="Foto - Primeiro prédio do institut de menores" loading="lazy"/>
                         <figcaption class="">Construção do primeiro prédio do instituto</figcaption>
                     </figure>
                 </div>
             </div>
 
-            <div class="col-md-6 p-4">
-                <p class="text-muted">
-                    &emsp;&emsp;Fundada em 1924 por Dom Joaquim Ferreira de Mello, a nossa instituição começou como
-                    a Associação
-                    Protetora de Meninos Desvalidos em Pelotas, oferecendo educação e assistência a meninos
-                    carentes. Em
-                    1925, o nome mudou para Asilo de Meninos Desvalidos de Pelotas, e em 1926, com o apoio dos
-                    Irmãos
-                    Lassalistas, a qualidade educacional foi elevada. O "Colégio da Igrejinha" prosperou,
-                    tornando-se
-                    uma referência na comunidade, com o número de alunos crescendo significativamente.
-                </p>
-                <p class="text-muted m-0">
-                    &emsp;&emsp;Em 1944, sob a liderança de Dom Antônio Zattera, a instituição ampliou seu alcance e
-                    inaugurou o
-                    Instituto de Menores de Pelotas, no local onde antes funcionava o Asilo, continuando seu legado
-                    de
-                    apoio à infância abandonada e desprotegida. Hoje, seguimos com a mesma missão de promover a
-                    educação
-                    e o cuidado, ajudando a transformar vidas e contribuir para uma sociedade mais justa e
-                    solidária.
-                </p>
-            </div>
+            <p class="col-md-6 p-4 text-muted">
+                &emsp;&emsp;Fundada em 1924 por Dom Joaquim Ferreira de Mello, a nossa instituição começou como
+                a Associação
+                Protetora de Meninos Desvalidos em Pelotas, oferecendo educação e assistência a meninos
+                carentes. Em
+                1925, o nome mudou para Asilo de Meninos Desvalidos de Pelotas, e em 1926, com o apoio dos
+                Irmãos
+                Lassalistas, a qualidade educacional foi elevada. O "Colégio da Igrejinha" prosperou,
+                tornando-se
+                uma referência na comunidade, com o número de alunos crescendo significativamente.
+                <br>
+                &emsp;&emsp;Em 1944, sob a liderança de Dom Antônio Zattera, a instituição ampliou seu alcance e
+                inaugurou o
+                Instituto de Menores de Pelotas, no local onde antes funcionava o Asilo, continuando seu legado
+                de
+                apoio à infância abandonada e desprotegida. Hoje, seguimos com a mesma missão de promover a
+                educação
+                e o cuidado, ajudando a transformar vidas e contribuir para uma sociedade mais justa e
+                solidária.
+            </p>
         </div>
     </section>
     <!--  Section: About Us  -->
@@ -213,7 +227,7 @@
     <section id="projects" class="p-0 p-md-5 mx-0">
         <h2 class="w-100 text-center border-bottom border-black pb-2">Conheça Alguns de Nossos Projetos</h2>
 
-        <article class="row align-content-center justify-content-center border-bottom border-black py-1 mb-2 w-100">
+        <article class="row align-content-center justify-content-center border-bottom border-black p-2 mb-2 w-100">
             <div class="d-flex flex-column flex-md-row col-lg-9 p-0">
                 <div class="col-12 col-md-6 align-content-center">
                     <h3 class="text-center m-0 p-1">Banda de Música</h3>
@@ -229,15 +243,16 @@
                 <div class="col-12 col-md-6 p-0">
                     <div class="bg-image hover-overlay" data-mdb-ripple-init
                          data-mdb-ripple-color="light">
-                        <figure class="figure">
-                            <img src="img/projeto-banda.jpg" alt="Projeto Banda de Música" class="img-fluid"/>
+                        <figure class="figure d-flex flex-column w-100">
+                            <img src="img/projeto-banda.jpg" alt="Projeto Banda de Música"
+                                 class="img-fluid project-image" loading="lazy"/>
                             <figcaption class="">Banda de música do Instituto Dom Antônio Zattera</figcaption>
                         </figure>
                     </div>
                 </div>
             </div>
         </article>
-        <article class="row align-content-center justify-content-center border-bottom border-black py-1 mb-2 w-100">
+        <article class="row align-content-center justify-content-center border-bottom border-black p-2 mb-2 w-100">
             <div class="d-flex flex-column flex-md-row col-lg-9 p-0">
                 <div class="col-12 col-md-6 order-md-last align-content-center">
                     <h3 class="text-center m-0 p-1">Taekwondo</h3>
@@ -253,15 +268,16 @@
                 <div class="col-12 col-md-6 order-md-first p-0">
                     <div class="bg-image hover-overlay" data-mdb-ripple-init
                          data-mdb-ripple-color="light">
-                        <figure class="figure">
-                            <img src="img/projeto-taekwondo.jpg" alt="Projeto Taekwondo" class="img-fluid"/>
+                        <figure class="figure d-flex flex-column w-100">
+                            <img src="img/projeto-taekwondo.jpg" alt="Projeto Taekwondo"
+                                 class="img-fluid project-image" loading="lazy"/>
                             <figcaption class="">Quem Luta Não Briga, projeto parceiro do IMDAZ</figcaption>
                         </figure>
                     </div>
                 </div>
             </div>
         </article>
-        <article class="row align-content-center justify-content-center py-1 mb-2 w-100">
+        <article class="row align-content-center justify-content-center border-bottom border-black p-2 mb-2 w-100">
             <div class="d-flex flex-column flex-md-row col-lg-9 p-0">
                 <div class="col-12 col-md-6 align-content-center">
                     <h3 class="text-center m-0 p-1">Entrelaçando Linhas e Sonhos</h3>
@@ -278,9 +294,9 @@
                 <div class="col-12 col-md-6 p-0">
                     <div class="bg-image hover-overlay" data-mdb-ripple-init
                          data-mdb-ripple-color="light">
-                        <figure class="figure">
+                        <figure class="figure d-flex flex-column w-100">
                             <img src="img/projeto-costura.png" alt="Projeto Entrelaçando Linhas e Sonhos"
-                                 class="img-fluid"/>
+                                 class="img-fluid project-image" loading="lazy"/>
                             <figcaption class="">Projeto Entrelaçando Linhas e Sonhos</figcaption>
                         </figure>
                     </div>
@@ -289,6 +305,75 @@
         </article>
     </section>
     <!--  Section: Projects  -->
+
+    <!--  Section: Comments  -->
+    <section id="comments" class="p-0 p-md-5 mx-0">
+        <h2 class="text-center py-3">Depoimentos que nos fazem continuar ...</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-2 p-sm-2">
+            <div class="col">
+                <div class="card h-100 m-sm-2">
+                    <img src="img/perfil-ex-aluna.png" class="card-img-top" alt="Foto de perfil" loading="lazy"/>
+                    <div class="card-body pb-0">
+                        <p class="card-text">
+                            "Cresci no Instituto Dom Antônio Zattera e, graças ao apoio e carinho que recebi, consegui
+                            me
+                            formar e construir uma carreira. Hoje sou professora e tenho a chance de retribuir o que
+                            recebi, ensinando e ajudando outras crianças a terem um futuro melhor."
+                        </p>
+                    </div>
+                    <div class="card-footer pt-0">
+                        <small class="fw-bold">Maria, ex-aluna</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 m-sm-2">
+                    <img src="img/perfil-homen-jovem.jpg" class="card-img-top" alt="Foto de perfil" loading="lazy"/>
+                    <div class="card-body pb-0">
+                        <p class="card-text">
+                            "Ser voluntário no instituto transformou minha vida. Cada sorriso e cada conquista das
+                            crianças me mostram o impacto real que o trabalho voluntário pode ter. É uma experiência
+                            única de aprendizado e gratidão."
+                        </p>
+                    </div>
+                    <div class="card-footer pt-0">
+                        <small class="fw-bold">João, voluntário</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 m-sm-2">
+                    <img src="img/perfil-mae.jpg" class="card-img-top" alt="Foto de perfil" loading="lazy"/>
+                    <div class="card-body pb-0">
+                        <p class="card-text">
+                            "Minha filha encontrou um lar no Instituto Dom Antônio Zattera. Além de educação de
+                            qualidade, ela recebe amor e atenção que fazem toda a diferença em sua vida. Sou eternamente
+                            grata ao instituto."
+                        </p>
+                    </div>
+                    <div class="card-footer pt-0">
+                        <small class="fw-bold">Ana, mãe de uma criança atendida</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 m-sm-2">
+                    <img src="img/perfil-doador.png" class="card-img-top" alt="Foto de perfil" loading="lazy"/>
+                    <div class="card-body pb-0">
+                        <p class="card-text">
+                            "Saber que minhas doações ajudam diretamente no futuro de tantas crianças me enche de
+                            alegria. O Instituto Dom Antônio Zattera faz um trabalho incrível, e apoiar essa causa é
+                            a melhor forma de contribuir para um mundo melhor."
+                        </p>
+                    </div>
+                    <div class="card-footer pt-0">
+                        <small class="fw-bold">Carlos, doador</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  Section: Comments  -->
 
     <!--  Section: Help the Institute  -->
     <section id="help" class="row p-0 p-lg-4 mx-0">
@@ -305,24 +390,26 @@
             </p>
             <div class="d-xl-flex justify-content-center">
                 <div class="col-12 col-xl-5 p-1">
-                    <form class="card border border-black p-2 h-100">
+                    <form action="#" method="post" id="contactForm" class="card border border-black p-2 h-100">
                         <h2>Contato</h2>
                         <div data-mdb-input-init class="form-outline mb-2">
-                            <input type="text" id="name" class="form-control"/>
+                            <input type="text" id="name" class="form-control" required/>
                             <label class="form-label" for="name">Nome</label>
                         </div>
 
                         <div data-mdb-input-init class="form-outline mb-2">
-                            <input type="email" id="email" class="form-control"/>
+                            <input type="email" id="email" class="form-control" required/>
                             <label class="form-label" for="email">Email</label>
                         </div>
 
                         <div data-mdb-input-init class="form-outline mb-2">
-                            <textarea class="form-control" id="message" rows="3"></textarea>
-                            <label class="form-label" for="message">Menssagem</label>
+                            <textarea class="form-control" id="message" rows="3" required></textarea>
+                            <label class="form-label" for="message">Mensagem</label>
                         </div>
 
-                        <button data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-2">Enviar
+                        <button type="button" class="btn btn-primary btn-block mb-2" data-mdb-ripple-init
+                                data-mdb-modal-init data-mdb-target="#contactModal">
+                            Enviar
                         </button>
                     </form>
                 </div>
@@ -378,12 +465,6 @@
 
     </section>
     <!--  Section: Help the Institute  -->
-
-    <!--  Section: Comments  -->
-    <section id="comments" class="px-5 m-0">
-
-    </section>
-    <!--  Section: Comments  -->
 </main>
 <!-- Main -->
 
@@ -403,10 +484,11 @@
                     <h6 class="text-uppercase fw-bold mb-4">
                         Instituto de Menores<br>Dom Antônio Zattera
                     </h6>
-                    <a href="" class="text-reset d-block mb-2">
+                    <a href="https://www.facebook.com/pg/institutodemenoresdaz/photos/?ref=page_internal"
+                       class="text-reset d-block mb-2">
                         <i class="fab fa-facebook-f me-2"></i>/institutodemenoresdaz
                     </a>
-                    <a href="" class="text-reset d-block mb-2">
+                    <a href="https://www.instagram.com/imdaz.1924/" class="text-reset d-block mb-2">
                         <i class="fab fa-instagram me-2"></i>@imdaz.1924
                     </a>
                     <p>CNPJ 92.238.138.0022-76</p>
@@ -662,6 +744,29 @@
     </div>
 </div>
 <!-- Credit Card Donation Modal -->
+
+<!-- Contact Success Modal -->
+<div class="modal fade" id="contactModal" data-mdb-backdrop="static"
+     data-mdb-keyboard="false" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Obrigado pelo contato!</h1>
+                <button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Retornaremos em breve pelo email fornecido.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-mdb-ripple-init data-mdb-dismiss="modal">
+                    Fechar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact Success Modal -->
 
 <!-- MDB -->
 <script
