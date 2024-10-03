@@ -86,17 +86,10 @@ try {
     const searchInput = document.getElementById('searchInput');
     const searchResults = document.getElementById('searchResults');
     const resultsList = document.getElementById('resultsList');
-    const navToggleButton = document.getElementById('navToggleButton');
 
     // Submit the search form
     searchForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        try {
-            navToggleButton.click();
-        } catch (e) {
-            console.log(e);
-        }
-
         const term = searchInput.value.trim();
         performSearch(term);
     });
@@ -179,6 +172,23 @@ try {
             parent.replaceChild(document.createTextNode(el.textContent), el);
         });
     }
+} catch (e) {
+    console.log(e);
+}
+
+// Function to toggle the nav menu when a link is clicked
+try {
+    document.querySelectorAll('.nav-button').forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            const navbarToggler = document.getElementById('navbarToggler');
+            const clickOut = document.getElementById("clickOut");
+            if (navbarToggler.classList.contains('show')) {
+                navbarToggler.classList.remove('show');
+            } else {
+                clickOut.click();
+            }
+        });
+    });
 } catch (e) {
     console.log(e);
 }
