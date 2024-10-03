@@ -111,10 +111,9 @@ header {
 
 .carousel-caption {
     font-size: 1.2rem;
-    text-shadow:
-            1px 1px 1px black,
-            0 0 1em black,
-            0 0 0.2em black;
+    text-shadow: 1px 1px 1px black,
+    0 0 1em black,
+    0 0 0.2em black;
     color: white;
 }
 
@@ -148,6 +147,7 @@ header {
     text-align: justify;
     background: rgba(229, 112, 34, 1);
 }
+
 #comments {
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(229, 112, 34, 1) 100%);
 }
@@ -163,6 +163,10 @@ footer {
     justify-content: center;
     background: black;
     color: white;
+}
+
+.highlight {
+    background-color: yellow;
 }
 
 @media (max-device-height: 520px) {

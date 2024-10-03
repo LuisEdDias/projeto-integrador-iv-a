@@ -58,6 +58,7 @@ try {
         donationForm.style.display = 'block';
     })
 
+    // CPF Mask function
     function cpfMask(value) {
         if (!value) return "";
         value = value.replace(/\D/g, '');
@@ -67,6 +68,7 @@ try {
         return value;
     }
 
+    // Fill the checkout card
     function fillCheckout(){
         document.querySelector('#checkoutName').textContent = firstName.value + " " + lastName.value;
         document.querySelector('#checkoutCardType').textContent = cardType.value;
@@ -75,5 +77,108 @@ try {
     }
 
 }catch (e){
+    console.log(e);
+}
+
+// Search Script
+try {
+    const searchForm = document.getElementById('searchForm');
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+    const resultsList = document.getElementById('resultsList');
+    const navToggleButton = document.getElementById('navToggleButton');
+
+    // Submit the search form
+    searchForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        try {
+            navToggleButton.click();
+        } catch (e) {
+            console.log(e);
+        }
+
+        const term = searchInput.value.trim();
+        performSearch(term);
+    });
+
+    // Perform the search
+    function performSearch(term) {
+        // Clear old results
+        clearHighlights();
+        resultsList.innerHTML = '';
+        searchResults.style.display = 'none';
+
+        if (!term) {
+            return;
+        }
+
+        // Minimum word length to search
+        if (term.length < 3){
+            return;
+        }
+
+        // Selects the elements where the search should be performed
+        const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p');
+
+        const regex = new RegExp(`(${term})`, 'gi');
+        let resultId = 0;
+
+        elements.forEach(el => {
+            if (regex.test(el.textContent)) {
+                // Highlights the text found
+                let id = 'result' + resultId;
+                el.innerHTML = el.innerHTML.replace(regex, `<i class='highlight' id='${id}'>$1</i>`);
+                resultId++;
+
+                // Adds the element to the result list
+                const listItem = document.createElement('div');
+                listItem.classList.add('page-item');
+                listItem.classList.add('col-auto');
+
+                const link = document.createElement('a');
+                link.href = `#${id}`;
+                link.classList.add('page-link');
+                link.textContent = resultId.toString();
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetElement = document.getElementById(id);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'center',
+                            inline: 'nearest'
+                        });
+                    }
+                });
+
+                listItem.appendChild(link);
+                resultsList.appendChild(listItem);
+            }
+        });
+
+        if (resultId > 0) {
+            searchResults.style.display = 'block';
+        } else {
+            alert("Nenhum resultado encontrado!");
+        }
+    }
+
+    // Cleans the highLights
+    document.addEventListener('click', (e) => {
+        if (!searchResults.contains(e.target) && e.target !== searchInput) {
+            clearHighlights();
+            searchResults.style.display = 'none';
+        }
+    });
+
+    // Cleans to clean highlights
+    function clearHighlights() {
+        const highlightedElements = document.querySelectorAll('.highlight');
+        highlightedElements.forEach(el => {
+            const parent = el.parentNode;
+            parent.replaceChild(document.createTextNode(el.textContent), el);
+        });
+    }
+} catch (e) {
     console.log(e);
 }
