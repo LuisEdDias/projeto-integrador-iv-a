@@ -178,7 +178,7 @@ try {
 
 // Function to toggle the nav menu when a link is clicked
 try {
-    document.querySelectorAll('.nav-button').forEach(function(link) {
+    document.querySelectorAll('.nav-button-out').forEach(function(link) {
         link.addEventListener('click', function(event) {
             const navbarToggler = document.getElementById('navbarToggler');
             const clickOut = document.getElementById("clickOut");

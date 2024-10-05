@@ -57,7 +57,7 @@
         <nav class="navbar navbar-expand-lg p-2 border-bottom border-black border-top">
             <div class="container-fluid p-0 mx-lg-4 mx-lg-5 m-2 my-lg-auto">
                 <span class="d-none" id="clickOut"></span>
-                <a class="navbar-brand nav-button m-0 mb-lg-0" href="#title">
+                <a class="navbar-brand nav-button nav-button-out m-0 mb-lg-0" href="#title">
                     <span class="top-key"></span>
                     <span class="text">INÍCIO</span>
                     <span class="bottom-key"></span>
@@ -70,14 +70,14 @@
                 <div class="collapse navbar-collapse justify-content-lg-between mt-2 mt-lg-0" id="navbarToggler">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item mb-2 mb-lg-0">
-                            <a class="nav-button" href="#about-us">
+                            <a class="nav-button nav-button-out" href="#about-us">
                                 <span class="top-key"></span>
                                 <span class="text">SOBRE</span>
                                 <span class="bottom-key"></span>
                             </a>
                         </li>
                         <li class="nav-item mb-2 mb-lg-0">
-                            <a class="nav-button" href="#projects">
+                            <a class="nav-button nav-button-out" href="#projects">
                                 <span class="top-key"></span>
                                 <span class="text">PROJETOS</span>
                                 <span class="bottom-key"></span>
@@ -92,19 +92,19 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="relatedLinks">
                                 <li>
-                                    <a class="dropdown-item" href="https://institutodemenores.wixsite.com/meusite"
+                                    <a class="dropdown-item nav-button-out" href="https://institutodemenores.wixsite.com/meusite"
                                        target="_blank" rel="noopener noreferrer">
                                         Site Oficial IMDAZ
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="https://www.doeparaoimdaz.com/"
+                                    <a class="dropdown-item nav-button-out" href="https://www.doeparaoimdaz.com/"
                                        target="_blank" rel="noopener noreferrer">
                                         Doar
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="https://domantoniozattera.ucpel.edu.br/"
+                                    <a class="dropdown-item nav-button-out" href="https://domantoniozattera.ucpel.edu.br/"
                                        target="_blank" rel="noopener noreferrer"
                                     >
                                         Memorial Dom Antônio Zattera
@@ -113,14 +113,14 @@
                             </ul>
                         </li>
                         <li class="nav-item mb-2 mb-lg-0">
-                            <a class="nav-button" href="#help">
+                            <a class="nav-button nav-button-out" href="#help">
                                 <span class="top-key"></span>
                                 <span class="text">COMO AJUDAR</span>
                                 <span class="bottom-key"></span>
                             </a>
                         </li>
                         <li class="nav-item mb-2 mb-lg-0">
-                            <a class="nav-button" href="#help">
+                            <a class="nav-button nav-button-out" href="#help">
                                 <span class="top-key"></span>
                                 <span class="text">CONTATO</span>
                                 <span class="bottom-key"></span>
@@ -130,7 +130,7 @@
                     <form class="d-flex mb-2 mb-lg-0" role="search" id="searchForm">
                         <input class="form-control me-1 border border-black" type="search" placeholder="Buscar"
                                aria-label="Buscar" id="searchInput">
-                        <button class="nav-button" type="submit" id="searchButton">
+                        <button class="nav-button nav-button-out" type="submit" id="searchButton">
                             <span class="top-key"></span>
                             <span class="text">BUSCAR</span>
                             <span class="bottom-key"></span>
@@ -153,7 +153,7 @@
     <!--  Navigation  -->
 
     <!--  Main Carousel  -->
-    <div id="main-carousel" class="carousel slide p-0" data-mdb-ride="carousel" data-mdb-carousel-init>
+    <section id="main-carousel" class="carousel slide p-0" data-mdb-ride="carousel" data-mdb-carousel-init>
         <div class="carousel-indicators">
             <button type="button" data-mdb-target="#main-carousel" data-mdb-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -201,7 +201,7 @@
                   aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-    </div>
+    </section>
     <!--  Main Carousel  -->
 
     <!--  Section: About Us  -->
@@ -502,10 +502,11 @@
                         Instituto de Menores<br>Dom Antônio Zattera
                     </h6>
                     <a href="https://www.facebook.com/pg/institutodemenoresdaz/photos/?ref=page_internal"
-                       class="text-reset d-block mb-2">
+                       class="text-reset d-block mb-2" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-facebook-f me-2"></i>/institutodemenoresdaz
                     </a>
-                    <a href="https://www.instagram.com/imdaz.1924/" class="text-reset d-block mb-2">
+                    <a href="https://www.instagram.com/imdaz.1924/" class="text-reset d-block mb-2"
+                       target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-instagram me-2"></i>@imdaz.1924
                     </a>
                     <p>CNPJ 92.238.138.0022-76</p>
@@ -520,18 +521,20 @@
                     Publicações mais Populares
                 </h6>
                 <p>
-                    <a href="https://institutodemenores.wixsite.com/meusite" class="text-reset">Site Oficial IMDAZ</a>
+                    <a href="https://institutodemenores.wixsite.com/meusite" class="text-reset"
+                       target="_blank" rel="noopener noreferrer">Site Oficial IMDAZ</a>
                 </p>
                 <p>
-                    <a href="https://www.doeparaoimdaz.com/" class="text-reset">Doe para o Instituto</a>
+                    <a href="https://www.doeparaoimdaz.com/" class="text-reset"
+                       target="_blank" rel="noopener noreferrer">Doe para o Instituto</a>
                 </p>
                 <p>
                     <a href="https://institutodemenores.wixsite.com/meusite/post/90-vagas-90-vidas-90-hist%C3%B3rias"
-                       class="text-reset">90 vagas, 90 vidas, 90 histórias</a>
+                       class="text-reset" target="_blank" rel="noopener noreferrer">90 vagas, 90 vidas, 90 histórias</a>
                 </p>
                 <p>
                     <a href="https://institutodemenores.wixsite.com/meusite/post/fofuras-do-ber%C3%A7%C3%A1rio-1"
-                       class="text-reset">Fofuras do Berçário 1</a>
+                       class="text-reset" target="_blank" rel="noopener noreferrer">Fofuras do Berçário 1</a>
                 </p>
             </div>
             <!-- Grid column -->
@@ -555,8 +558,10 @@
 
     <!-- Copyright -->
     <section class="copyright p-2">
-        <p class="m-0">&copy; 2024 Copyright: <a class="text-white" href="https://www.linkedin.com/in/luisvdias94/">Luís
-            Eduardo Dias</a>,
+        <p class="m-0">&copy; 2024 Copyright:
+            <a class="text-white" href="https://www.linkedin.com/in/luisvdias94/" target="_blank" rel="noopener noreferrer">
+            Luís Eduardo Dias
+            </a>,
             UCPel - Análise e Desenvolvimento de Sistemas</p>
     </section>
     <!-- Copyright -->
