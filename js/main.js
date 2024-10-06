@@ -37,6 +37,7 @@ try {
 
         if (donationAmount < 10) {
             alert('O valor mínimo para doar no cartão de crédito é R$10');
+            return;
         }
 
         fillCheckout();
@@ -189,6 +190,27 @@ try {
             }
         });
     });
+} catch (e) {
+    console.log(e);
+}
+
+// Contact Modal Script
+try {
+    const contactForm = document.getElementById('contactForm');
+    const contactName = document.getElementById('name');
+    const contactEmail = document.getElementById('email');
+    const contactSubject = document.getElementById('subject');
+    const contactMessage = document.getElementById('message');
+    const modal = new mdb.Modal(document.getElementById('contactModal'));
+
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        contactName.value = "";
+        contactEmail.value = "";
+        contactSubject.value = "";
+        contactMessage.value = "";
+        modal.show();
+    })
 } catch (e) {
     console.log(e);
 }
